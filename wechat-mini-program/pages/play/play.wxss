@@ -1,0 +1,273 @@
+.header {
+  -webkit-box-align: center;
+  background-color: #26a2ff;
+  align-items: center;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  height: 40px;
+  line-height: 1;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.header-button-is-left {
+  display: block;
+  text-align:left;
+  -webkit-box-flex: -33.5;
+  flex: 1.5;
+}
+
+.header-button-is-right {
+  display: block;
+  text-align:right;
+  -webkit-box-flex: -33.5;
+  flex: 1.5;
+}
+
+.draw-wrap {
+  background: #fff;
+  width: 100%;
+  height: 260px;
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+}
+
+.draw-canvas {
+  width: 100%;
+  height: 260px;
+}
+
+.fiexd-msg-list {
+    position: absolute;
+    bottom: 0;
+    min-width: 100%;
+    background: rgba(0, 0, 0, 0.13);
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    transition: all .5s;
+    font-size: .9em;
+}
+
+.msg-auto-scroll {
+    width: 10000%;
+    margin-left: 80%;
+}
+
+.msg-auto-scroll .msg-list-all {
+    display: inline-block;
+}
+
+.chat-input {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.input-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #fff;
+    border-bottom: #26a2ff solid 1px;
+}
+
+.input-group input {
+    -ms-flex: 1;
+    flex: 1;
+    border: 0;
+    margin: 0;
+    height: 40px;
+    padding: 0px 15px;
+    font-size: 1.1em;
+}
+
+.input-group button {
+    border-radius: 0;
+    height: 40px;
+}
+
+.subBtn::after {
+    background-color: #000;
+    content: " ";
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.subBtn {
+    display: inline-block;
+    padding: 0 12px;
+    color: #fff;
+    background-color: #26a2ff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    font-size: 18px;
+    height: 40px;
+    outline: 0;
+    text-align: center;
+}
+
+.player-list {
+    width: 100%;
+    overflow: auto;
+}
+
+.player-list .player-item {
+    width: 21vw;
+    display: inline-block;
+    padding: 2vw;
+}
+
+.player-item .head {
+    position: relative;
+    width: 100%;
+    height: 18vw;
+    color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 10vw;
+    background-color: #26a2ff;
+}
+
+.player-item.draw .head:before {
+    content: "\753B";
+}
+
+.player-item .head:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #26a2ff;
+    background: #fff;
+    padding: 2px 4px;
+    font-size: 10px;
+}
+
+.player-item.draw .head:after {
+    left: 18px;
+}
+
+.player-item.me .head:after {
+    content: "\6211";
+}
+
+.player-item .head:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #26a2ff;
+    background: #fff;
+    padding: 2px 4px;
+    font-size: 10px;
+}
+
+.player-item.draw .head {
+    background: #006dbf;
+}
+
+.player-item .username {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #26a2ff;
+    font-size: .8em;
+    margin-top: .2em;
+    text-align: center; 
+}
+
+.player-item .score {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 10px;
+    padding: 2px 4px;
+    background: #fff;
+    color: #26a2ff;
+}
+
+.operator-btns {
+    padding: 5px 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.operator-btns > view {
+    -ms-flex: 1;
+    flex: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.operator-btns .color {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+.operator-btns .line {
+    width: 5vw;
+    margin-right: 1vw;
+    text-align: center;
+}
+
+.operator-btns .iconfont {
+    font-size: 20px;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-weibiaoti545:before {
+    content: "\E631";
+}
+
+.icon-chexiao:before {
+    content: "\E609";
+}
+
+.icon-shanchu:before {
+    content: "\E61C";
+}
+
+.answer-list {
+    text-align: center;
+}
+
+.answer {
+    color: #26a2ff;
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+.line-css {
+    height: 1px;
+    background: #e6e6e6;
+    margin: 0 20rpx;
+}

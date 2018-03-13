@@ -1,0 +1,89 @@
+.header {
+  -webkit-box-align: center;
+  background-color: #26a2ff;
+  align-items: center;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  height: 40px;
+  line-height: 1;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.header-button-is-left {
+  display: block;
+  text-align:left;
+  -webkit-box-flex: -33.5;
+  flex: 1.5;
+}
+
+.header-button-is-right {
+  display: block;
+  text-align:right;
+  -webkit-box-flex: -33.5;
+  flex: 1.5;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.wrapper-title {
+  width: 80px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.wrapper-value {
+  margin-left: 20px;
+  width: 70%;
+  box-sizing: border-box;
+  display: block;
+}
+
+.radiolist-title {
+  font-size: 12px;
+  margin: 8px;
+  display: block;
+  color: #888;
+  cursor: default;
+}
+
+.radiolist-item {
+  -webkit-box-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 14px;
+  height: 40px;
+  line-height: 1;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.subBtn {
+  text-align: center;
+  line-height: 2em;
+  font-size: 2em;
+  color: #ccc;
+  padding: 15px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+}

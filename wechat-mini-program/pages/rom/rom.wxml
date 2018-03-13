@@ -1,0 +1,35 @@
+<view class="rom">
+
+  <!-- 头部 -->
+  <view class="header">
+    <view class="header-button-is-left"></view>
+    <view class="header-title">{{romName}}的房间</view>
+    <view class="header-button-is-right">房间号 {{romId}}</view>
+  </view>
+
+  <view class="player-waiting">
+
+      <view wx:for="{{userList}}" wx:key="item" class="{{item.style}}">
+        <view class="head">{{item.firstname}}</view>
+        <view class="username">{{item.username}}</view>
+      </view>
+
+  </view>
+
+  <view class="begin" wx:if="{{isMaster}}">
+    <button class="beginBtn">开始游戏</button>
+  </view>
+
+  <view class="chat-input">
+    <form bindsubmit="sendMsg">
+      <div class="input-group">
+        <input type="input-text" name="msg" placeholder="请输入要发送的消息"/>
+        <button formType="submit" class="subBtn">发送</button>
+      </div>
+    </form>
+
+    <view class="msg-list">
+      <p wx:for="{{msgList}}" wx:key="item">{{item.msg}}</p>
+    </view>
+  </view>
+</view>

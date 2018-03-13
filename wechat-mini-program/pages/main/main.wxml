@@ -1,0 +1,73 @@
+<!--main.wxml-->
+<view>
+  <!-- 头部 -->
+  <view class="header">
+    <view class="header-button-is-left">
+      <view bindtap="gotoSearch"><icon type="search" size="10" color="white"/>查找房间</view>
+    </view>
+    <view class="header-title">你猜我画-游戏大厅</view>
+    <view class="header-button-is-right">
+      <view bindtap="gotoCreateRom">创建房间</view>
+    </view>
+  </view>
+  <!-- 用户头部 -->
+  <view class="user-info-shadow">
+    <view class="head">
+      {{firstname}}
+    </view>
+    <view class="name">
+      {{user.username}}
+    </view>
+    <view class="after">
+      <button>修改昵称</button>
+    </view>
+  </view>
+  <!-- 房间列表 -->
+  <view class="room-list">
+    <view class="rl-room-loadmore">
+      <view class="rl-room-loadmore-content">
+        <view class="rl-room-loadmore-top">
+          <!-- 下拉刷新 -->
+        </view>
+        
+        <view wx:for="{{romList}}" wx:key="item">
+          <!-- 房间信息 -->
+          <view class="room-item">
+            <header class="light-header">
+              <view class="light-header-button-is-left">
+                <view class="room-name">{{item.id}}: {{item.name}}</view>
+              </view>
+              <view class="light-header-title"></view>
+              <view class="light-header-button-is-right">
+                <view class="status">准备中</view>
+              </view>
+            </header>
+            
+            <header class="white-header">
+              <view class="white-header-button-is-left">
+                <view class="room-play-number">玩家人数: {{item.joined}} / {{item.playNumber}}</view>
+              </view>
+              <view class="white-header-title"></view>
+              <view class="white-header-button-is-right">
+                <view class="join-btn">
+                  <button bindtap="gotoRom" data-romid="{{item.id}}">加入房间</button>
+                </view>
+              </view>
+            </header>
+          </view>
+
+        </view>
+        
+
+        <view class="rl-room-loadmore-bottom">
+          <!-- 上拉刷新 -->
+        </view>
+      </view>
+    </view>
+
+    <view class="rl-no-room">
+      <button class="rl-no-room-btn" bindtap="gotoCreateRom">没有想要的房间?创建一个!</button>
+      <view class="rl-server-info">在线人数:{{onlineNumber}}人!</view>
+    </view>
+  </view>
+</view>

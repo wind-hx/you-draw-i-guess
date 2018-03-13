@@ -1,0 +1,24 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+
+input, textarea, body, button, a, p, view {
+  font-family: -apple-system, "Microsoft YaHei", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+  font-weight: 100;
+
+}
+button {
+  background-color: transparent;
+  color: #26a2ff;
+  border: 0px solid #26a2ff;
+  border-radius: 0;
+  display: inline-block;
+}

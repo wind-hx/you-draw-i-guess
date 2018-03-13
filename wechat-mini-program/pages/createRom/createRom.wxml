@@ -1,0 +1,39 @@
+<view>
+  <!-- 头部 -->
+  <view class="header">
+    <view class="header-button-is-left"></view>
+    <view class="header-title">创建房间</view>
+    <view class="header-button-is-right"></view>
+  </view>
+
+  <form bindsubmit="createRomBtn">
+    <!-- 房间名称 -->
+    <view class="wrapper">
+      <view class="wrapper-title">
+        房间名称
+      </view>
+      <view class="wrapper-value">
+        <input placeholder="请输入房间名称" name="romname" type="input-text" confirm-type="done" auto-focus/>
+      </view>
+    </view>
+
+    <view class="radiolist">
+      <label class="radiolist-title">房间类型</label>
+
+      <radio-group name="type">
+        <view class="radiolist-item">
+          <radio value="1" checked="checked" />公开
+        </view>
+        <view class="radiolist-item">
+          <radio value='2'/>私密(不在游戏大厅显示)
+        </view>
+
+      </radio-group>
+    </view>
+
+    <view class="subBtn">
+      <button class="btn" formType="submit">创建</button>
+    </view>
+  </form>
+
+</view>

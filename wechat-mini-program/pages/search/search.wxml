@@ -1,0 +1,8 @@
+<view class="search">
+  <view class="input">
+    <input style="width: 100%" placeholder="请输入房间号" type="number" confirm-type="search" auto-focus/>
+  </view>
+  <view class="btn">
+    <button>搜索</button>
+  </view>
+</view>

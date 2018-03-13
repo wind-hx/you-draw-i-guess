@@ -1,0 +1,22 @@
+<view class="play">
+
+  <canvas canvas-id="test" />
+  
+  <button bindtap="btnClick">点击</button>
+
+  <modal
+    hidden="{{isShowScoreList}}"
+    title="分数"
+    confirm-text="确定"
+    bindcancel="cancelEditRemark"
+    bindconfirm="editRemark"
+    no-cancel>
+    
+    <view class="answer-list">
+      <label>第1名: 沉默的喊叫 0分</label>
+      <view class="line-css"></view>
+      <label>第2名: 沉默的喊叫 0分</label>
+    </view>
+  </modal>
+
+</view>

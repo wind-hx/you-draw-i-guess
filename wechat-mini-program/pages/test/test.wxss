@@ -1,0 +1,18 @@
+.answer-list {
+    text-align: center;
+}
+
+.answer {
+    color: #26a2ff;
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+.line-css {
+
+    height: 1px;
+
+    background: #e6e6e6;
+
+    margin: 0 20rpx;
+
+}

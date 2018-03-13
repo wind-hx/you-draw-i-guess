@@ -1,0 +1,100 @@
+<view class="play">
+
+  <!-- 头部 -->
+  <view class="header">
+    <view class="header-button-is-left">{{leftText}}</view>
+    <view class="header-title"></view>
+    <view class="header-button-is-right">{{rightText}}</view>
+  </view>
+  <!-- 画布 -->
+  <view class="draw-wrapper">
+    <view class="draw-wrap">
+
+      <canvas class="draw-canvas" canvas-id="playCanvas" bindtouchstart="start" bindtouchmove="move" bindtouchend="end"/>
+
+      <view class="fiexd-msg-list" style="opacity: 0;">
+        <view class="msg-auto-scroll">
+          <view class="msg-list-all"></view>
+        </view>
+      </view>
+    </view>
+
+    <view class="operator-btns flex" wx:if="{{isDraw}}">
+      <view>
+        <view class="color" style="background: rgb(0, 0, 0);"></view>
+      </view>
+      <view>
+        <view class="line" style="height: 4px;background: rgb(0, 0, 0);"></view>
+        <view>4</view>
+      </view>
+      <view>
+        <view class="iconfont icon-weibiaoti545"></view>
+      </view>
+      <view>
+        <view class="iconfont icon-chexiao"></view>
+      </view>
+      <view>
+        <view class="iconfont icon-shanchu"></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 输入 -->
+  <view class="chat-input" wx:if="{{!isDraw}}">
+    <form bindsubmit="sendMsg">
+      <div class="input-group">
+        <input type="input-text" name="msg" placeholder="请输入要发送的消息"/>
+        <button formType="submit" class="subBtn">发送</button>
+      </div>
+    </form>
+
+    <view class="msg-list">
+      <p wx:for="{{msgList}}" wx:key="item">{{item.msg}}</p>
+    </view>
+  </view>
+
+  <!-- 玩家列表 -->
+  <view class="player-list-wrap">
+    <view class="player-list">
+
+      <view class="player-item" wx:for="{{userList}}" wx:key="item" class="{{item.style}}">
+        <view class="head">
+          {{item.firstname}}
+          <view class="score">{{item.score}}分</view>
+        </view>
+        <view class="username">{{item.username}}</view>
+      </view>
+
+    </view>
+  </view>
+
+  <modal
+    hidden="{{!isShowAnswerList}}"
+    title="提示"
+    confirm-text="确定"
+    bindcancel="cancelAnswer"
+    bindconfirm="awswerClick"
+    no-cancel>
+    
+    <view class="answer-list">
+      <span>答案是:</span>
+      <span class="answer">{{answerText}}</span>
+    </view>
+  </modal>
+
+  <modal
+    hidden="{{!isShowScoreList}}"
+    title="提示"
+    confirm-text="回到房间"
+    bindconfirm="reGoToHome"
+    no-cancel>
+    
+    <view class="answer-list">
+      <view wx:for="{{userListSortByScore}}" wx:key="item" wx:for-index="index">
+        <label>第{{index + 1}}名: {{item.username}} {{item.score}}分</label>
+        <view class="line-css" wx:if="index !== (userListSortByScore.length - 1)"></view>
+      </view>
+    </view>
+  </modal>
+
+</view>
